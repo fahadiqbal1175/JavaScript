@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+span {
+  display: block;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.button {
+  width: 100px;
+  height: 100px;
+  margin: 17px;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+#red {
+  background-color: red;
+  /* margin-left: 27vw; */
+}
+
+#orange {
+  background-color: orange;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#pink {
+  background-color: pink;
+}
