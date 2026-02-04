@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Colors</title>
+    <style>
+    body {
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    #start{
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #stop{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        const startButton = document.querySelector("#start");
+        const stopButton = document.querySelector("#stop");
+        const text = document.querySelector("h1");
+
+        // generate a random color
+
+        const randomColor = function () {
+             let color = "#";
+            const hex = "0123456789ABCDEF";
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+
+        let intervalId;
+        const startChaningColor = function () {
+            if(!intervalId){
+                intervalId = setInterval(changeBgColor, 1000);
+            }
+            
+            function changeBgColor (){
+                document.body.style.backgroundColor = randomColor();
+            }
+            function changeTextColor (){
+                text.style.color = randomColor;
+            }
+        }
+        const stopChaningColor = function () {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        startButton.addEventListener('click',startChaningColor)
+        stopButton.addEventListener('click',stopChaningColor)
+        
+    </script>
+</body>
+</html>
