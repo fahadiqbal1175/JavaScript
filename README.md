@@ -47,7 +47,7 @@ An async/interval-based project where clicking "Start" changes the background co
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/fahadiqbal1175/javascript.git](https://github.com/fahadiqbal1175/javascript.git)
+    git clone "https://github.com/fahadiqbal1175/javascript.git"
     ```
 2.  **Navigate to the project directory:**
     Open the folder of the specific project you want to view (e.g., `Project_1 color changer`).
